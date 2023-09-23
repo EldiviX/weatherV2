@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="list">
+        <div class="block">
+            <div class="search">
+                <form>
+                    <input class="input" placeholder="City" type="text">
+                    <button>
+                        <img id="search" src="search.png" alt="">
+                    </button>
+                </form>
+            </div>
+            <div class="block_total">
+                <div class="block_main">
+                    <!-- <div class="temperature">14°</div> -->
+                    <div class="weather_img">
+                        <!-- <img id="pic" src=""> -->
+                    </div>
+                    <div class="city">
+                        <!-- <div class="city_name">Aktobe</div> -->
+                        <!-- <div class="city_like">
+                            <img src="Shape.png" alt="Shape">
+                        </div> -->
+                    </div>
+                </div>
+                <div class="block_liked">
+                    <div class="liked_text">Added Locations:</div>
+                    <div class="liked_list">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="render.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="renderList.js"></script>
+</body>
+</html>
