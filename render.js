@@ -1,7 +1,7 @@
 import { createElements } from "./main.js";
 // import { showList } from "./renderList.js";
 
-const serverUrl = 'http://api.openweathermap.org/data/2.5/weather';
+const serverUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = 'f660a2fb1e4bad108d6160b7f58c555f';
 const form = document.querySelector('form');
 const button = document.querySelector('button');
