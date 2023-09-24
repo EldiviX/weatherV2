@@ -1,4 +1,5 @@
 import { createElements } from "./main.js";
+export { get }
 // import { showList } from "./renderList.js";
 
 const serverUrl = 'https://api.openweathermap.org/data/2.5/weather';
@@ -25,7 +26,6 @@ function get(city) {
                 return result.json()
             })
             .then(data => {
-                console.log(data);
                 arr = data;
                 input.value = '';
                 

@@ -12,15 +12,22 @@ const arrList = [];
 let idteg = 0;
 
 function addCity() {
-    let obj = {};
-    idteg++;
-    obj.id = idteg;
-    obj.name = arr.name;
-    arrList.push(obj);
 
-    likedList.innerHTML = ''
+    const isCityExists = arrList.some(city => city.name === arr.name)
 
-    showList(arrList)
+    if (!isCityExists && arr.name) {
+        const newCity = {
+            id: idteg++,
+            name: arr.name,
+        };
+
+        arrList.push(newCity);
+    
+        likedList.innerHTML = ''
+    
+        showList(arrList)
+    }
+
 }
 
 function removeElements() {
