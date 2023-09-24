@@ -21,8 +21,6 @@ function addCity() {
     likedList.innerHTML = ''
 
     showList(arrList)
-
-    console.log(arrList);
 }
 
 function removeElements() {
@@ -70,8 +68,6 @@ function createElements(arr) {
     const imgShapeBlock = document.createElement('img');
     imgShapeBlock.src = 'Shape.png';
     divCityBlock.insertAdjacentElement('beforeend', imgShapeBlock);
-
-    console.log(arr.main.temp);
 }
 
 
