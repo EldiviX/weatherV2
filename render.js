@@ -9,13 +9,13 @@ let arr;
 
 function get(city) {
     const input = document.querySelector('.input');
-    let cityName = input.value.trim()
+    let cityName = input.value
     const cityToSearch = cityName !== '' ? cityName : city;
 
     const url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}&units=metric`;
     event.preventDefault();
 
-    if (cityToSearch !== '') {
+    if (cityToSearch.trim() !== '') {
         fetch(url)
             .then(result => {
                 if(!result.ok) {

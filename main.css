@@ -15,6 +15,7 @@ form {
 }
 
 button {
+    border: 0;
     background-color: white;
     width: 35px;
     height: 35px;
