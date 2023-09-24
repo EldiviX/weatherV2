@@ -8,10 +8,18 @@ const mainBlock = document.querySelector('.block_main')
 const imgBlock = document.querySelector('.weather_img')
 const likedList = document.querySelector('.liked_list');
 
-const arrList = [];
-let idteg = 0;
+const twoArrList = [
+    {id: 0, name: "Moscow"},
+    {id: 1, name: "London"},
+    {id: 2, name: "Novosibirsk"},
+    {id: 3, name: "Nevinnomyssk"}
+]
+
+const arrList = [...twoArrList];
+let idteg = arrList[arrList.length - 1].id;
 
 function addCity() {
+    console.log(arrList);
 
     const isCityExists = arrList.some(city => city.name === arr.name)
 

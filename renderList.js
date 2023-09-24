@@ -12,6 +12,8 @@ function createListElementBlock(item) {
     const otherBlock = document.createElement('div');
     otherBlock.setAttribute('class', 'other_block')
 
+    // const textBlock = document.createElement('div');
+    // textBlock.setAttribute('class', '')
 
     const block = document.createElement('div');
     block.setAttribute('class','list_elem');
@@ -25,6 +27,8 @@ function createListElementBlock(item) {
     img.setAttribute('class', 'img_close');
     img.setAttribute('src', 'close.png');
     img.addEventListener('click', event => {
+        event.stopPropagation();
+
         const st = item.id 
         const targetItem = arrList.findIndex(item => item.id === st)
         arrList.splice(targetItem, 1);
