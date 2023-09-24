@@ -4,8 +4,8 @@ import { arr } from "./render.js";
 import { showList } from "./renderList.js";
 
 const cityText = document.querySelector('.city');
-const mainBlock = document.querySelector('.block_main')
-const imgBlock = document.querySelector('.weather_img')
+const mainBlock = document.querySelector('.block_main');
+const imgBlock = document.querySelector('.weather_img');
 const likedList = document.querySelector('.liked_list');
 
 const twoArrList = [
@@ -21,7 +21,7 @@ let idteg = arrList[arrList.length - 1].id;
 function addCity() {
     console.log(arrList);
 
-    const isCityExists = arrList.some(city => city.name === arr.name)
+    const isCityExists = arrList.some(city => city.name === arr.name);
 
     if (!isCityExists && arr.name) {
         const newCity = {

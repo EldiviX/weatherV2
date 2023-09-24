@@ -1,4 +1,5 @@
 export { showList }
+
 import { arrList } from "./main.js";
 import { get } from "./render.js";
 
@@ -39,5 +40,4 @@ function createListElementBlock(item) {
     block.appendChild(img);
     otherBlock.appendChild(block)
     likedList.appendChild(otherBlock)
-
 }

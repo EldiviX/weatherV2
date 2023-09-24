@@ -1,5 +1,6 @@
-import { createElements, arrList } from "./main.js";
 export { get }
+
+import { createElements, arrList } from "./main.js";
 import { showList } from "./renderList.js";
 
 const serverUrl = 'https://api.openweathermap.org/data/2.5/weather';
@@ -13,7 +14,6 @@ function get(city) {
     const input = document.querySelector('.input');
     let cityName = input.value
     let cityToSearch = cityName !== '' ? cityName : city;
-
 
     const url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}&units=metric`;
 
@@ -42,18 +42,17 @@ function get(city) {
         
     }
     
-    
 function render(arr) {
     createElements(arr);
 }
 
-export {arr}
 
 window.addEventListener('load', () => {
     get("Moscow");
     showList(arrList);
 });
 
+export {arr}
 
 form.addEventListener('submit', get);
 button.addEventListener('click', get)
