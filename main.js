@@ -11,7 +11,7 @@ const likedList = document.querySelector('.liked_list');
 const twoArrList = [
     {id: 0, name: "Moscow"},
     {id: 1, name: "London"},
-    {id: 2, name: "Novosibirsk"},
+    {id: 2, name: "New Jersey"},
     {id: 3, name: "Nevinnomyssk"}
 ]
 
