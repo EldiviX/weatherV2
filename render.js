@@ -29,7 +29,7 @@ function get(city) {
             .then(data => {
                 arr = data;
                 input.value = '';
-                
+                console.log(arr);
                 render(arr)
             })
             .catch(error => {

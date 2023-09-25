@@ -7,6 +7,7 @@
     <link rel="icon" href="icon.png" type="image/x-icon">
     <title>Weather</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="tab.css">
 </head>
 <body>
     <div class="list">
@@ -19,7 +20,7 @@
                     </button>
                 </form>
             </div>
-            <div class="block_total">
+            <div id="nowTab" class="block_total">
                 <div class="block_main">
                     <!-- <div class="temperature">14°</div> -->
                     <div class="weather_img">
@@ -39,9 +40,21 @@
                     </div>
                 </div>
             </div>
+            <div class="tabs">
+                <div class="tabs_now shadow">
+                    <img id="home" src="det2.png" alt="" srcset="">
+                    <div class="now_text">Now
+                    </div>
+                </div>
+                <div class="tabs_details">
+                    <img id="det" src="det3.png" alt="" srcset="">
+                    <div class="details_text">Details
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script></script>
+    <script type="module" src="renderTabs.js"></script>
     <script type="module" src="render.js"></script>
     <script type="module" src="main.js"></script>
     <script type="module" src="renderList.js"></script>

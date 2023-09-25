@@ -68,7 +68,7 @@ button {
     margin: 0 auto;
     width: 600px;
     
-    height: 360px;
+    height: 400px;
     border: 1px solid;
 
     border-radius: 20px;
@@ -98,6 +98,23 @@ button {
     box-sizing: border-box;
 
     border-right: 1px solid rgba(0, 0, 0, 0.479);
+    border-top: 1px solid rgba(0, 0, 0, 0.479);
+    min-width: 300px;
+    height: 315px;
+}
+
+.block_detail {
+    box-sizing: border-box;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.479);
+    border-top: 1px solid rgba(0, 0, 0, 0.479);
+    min-width: 300px;
+    height: 315px;
+}
+
+.block_detail_other {
+    box-sizing: border-box;
+
     border-top: 1px solid rgba(0, 0, 0, 0.479);
     min-width: 300px;
     height: 315px;
@@ -164,7 +181,7 @@ button {
     padding-bottom: -10;
     font-size: 24px;
     overflow-y: scroll;
-    max-height: 235px;
+    max-height: 280px;
 
 }
 
@@ -210,3 +227,50 @@ button {
     display: flex;
 }
 
+
+.tabs {
+    border-right: 1px solid rgba(0, 0, 0, 0.479);
+    max-width: 299px;
+    height: 40px;
+    display: flex;
+
+    font-size: 20px;
+    
+}
+
+.tabs_now,
+.tabs_details {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.479);
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.719);
+}
+
+.tabs_now {
+    border-top: 1px solid rgba(0, 0, 0, 0.479);
+    border-bottom-left-radius: 20px;
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, 0.027);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.329) inset;
+}
+
+.tabs_details {
+    border-top: 1px solid rgba(0, 0, 0, 0.479);
+    border-right: none;
+}
+
+#home {
+    width: 25px;
+    margin-right: 3px;
+}
+#det {
+    width: 20px;
+    margin-right: 2px;
+}
