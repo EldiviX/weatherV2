@@ -2,6 +2,8 @@
 
 body {
     background-color: rgb(255, 255, 255);
+    background-image: url(img30.png);
+    background-size: 100%;
 }
 
 form {
@@ -9,19 +11,17 @@ form {
 }
 
 #pic {
-    /* width: 150px; */
     width: 100%; 
     height: 100%
-    
 }
 
 button {
-    border: 0;
-    background-color: white;
+    border: none;
     width: 35px;
     height: 35px;
     padding: 0;
     margin-top: 5px;
+    background: transparent;
 }
 
 .input {
@@ -32,14 +32,20 @@ button {
     font-size: 18px;
     padding-left: 16px;
     outline: none;
+
+    background: transparent;
 }
 
+.input::-webkit-input-placeholder { color: rgba(0, 0, 0, 0.664); }
 
 #search {
     max-width: 30px;
     max-height: 30px;
     border: 0;
     cursor: pointer;
+
+    margin-right: 10px;
+    margin-top: 3px;
 }
 
 .list {
@@ -50,20 +56,26 @@ button {
 }
 
 .block {
+    width: 100%;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
-    /* box-sizing: border-box; */
     margin: 0 auto;
     width: 600px;
     
     height: 360px;
     border: 1px solid;
     margin-top: 150px;
+
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.603);
+    background-color: rgba(255, 255, 255, 0.096);
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.171);
+
+    backdrop-filter: blur(5px);
 }
 
 .search {
     align-items: start;
-    /* box-sizing: border-box; */
-
     min-width: 600px;
     min-height: 45px;
 }
@@ -75,8 +87,8 @@ button {
 .block_main {
     box-sizing: border-box;
 
-    border-right: 1px solid;
-    border-top: 1px solid;
+    border-right: 1px solid rgba(0, 0, 0, 0.479);
+    border-top: 1px solid rgba(0, 0, 0, 0.479);
     min-width: 300px;
     height: 315px;
 }
@@ -84,7 +96,7 @@ button {
 .block_liked {
     box-sizing: border-box;
 
-    border-top: 1px solid;
+    border-top: 1px solid rgba(0, 0, 0, 0.479);
     min-width: 300px;
     height: 315px;
 }
@@ -128,7 +140,7 @@ button {
 
 .liked_text {
     height: 40px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.479);
     font-size: 24px;
     padding-top: 10px;
     padding-left: 10px;
