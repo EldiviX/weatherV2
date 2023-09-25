@@ -35,7 +35,7 @@ function get(city) {
             .catch(error => {
                 console.error(error);
                 
-                input.placeholder = `${error} (Город не найден)`;
+                input.placeholder = `City not found`;
                 input.value = '';
             });
         }
