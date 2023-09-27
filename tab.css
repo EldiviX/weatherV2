@@ -1,0 +1,42 @@
+.time_block {
+    min-width: 265px;
+    min-height: 92px;
+    max-width: 265px;
+    max-height: 92px;
+    font-size: 18px;
+    margin-top: 12px;
+    margin-left: 16px;
+    display: flex;
+     justify-content: space-between;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.479);
+}
+
+.time_block_h {
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 7px;
+    position: absolute;
+    width: 45px;
+    height: 16.1px;
+}
+
+.time_block_t {
+    margin-top: 40px;
+    padding-left: 7px;
+}
+
+.time_block_p {
+    width: 75px;
+    height: 75px;
+    /* margin-left: 140px; */
+    margin-top: 22px;
+}
+
+.time_block_dp {
+    width: 75px;
+    height: 75px;
+}
+
+.block_detail_other {
+}

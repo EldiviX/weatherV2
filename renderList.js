@@ -1,6 +1,6 @@
 export { showList }
 
-import { arrList } from "./main.js";
+import { arrList, saveArrListToLocalStorage } from "./main.js";
 import { get } from "./render.js";
 
 const likedList = document.querySelector('.liked_list');
@@ -26,13 +26,15 @@ function createListElementBlock(item) {
 
     const img = document.createElement('img');
     img.setAttribute('class', 'img_close');
-    img.setAttribute('src', 'close.png');
+    img.setAttribute('src', 'pictures/close.png');
     img.addEventListener('click', event => {
         event.stopPropagation();
 
         const st = item.id 
         const targetItem = arrList.findIndex(item => item.id === st)
         arrList.splice(targetItem, 1);
+
+        saveArrListToLocalStorage();
 
         event.target.closest('div').remove();
     });
