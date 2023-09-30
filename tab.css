@@ -43,7 +43,7 @@
 }
 
 .tab_city_name {
-    margin-top: 17px;
+    margin-top: 10px;
     font-size: 24px;
     text-align: center;
 
@@ -88,4 +88,42 @@
 
     /* font-weight: bold;
     color: rgba(0, 0, 0, 0.815); */
+}
+
+.down_block {
+    display: flex;
+    font-size: 18px;
+
+    margin-top: 85px;
+    margin-left: 12px;
+
+}
+
+.sunrise {
+    max-width: 20px;
+}
+
+.sunrise_block {
+    width: 20px;
+    margin-right: 2px;
+}
+
+.down_block_t1 {
+    display: flex;
+}
+
+.down_block_t2 {
+    margin-left: 12px;
+    display: flex;
+    position: absolute;
+    margin-left: 148px;
+}
+
+.sunset_block {
+    width: 20px;
+    margin-right: 2px;
+}
+
+.sunset {
+    width: 20px;
 }

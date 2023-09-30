@@ -152,6 +152,51 @@ function createMainTab() {
     mainTempBlock.insertAdjacentElement('beforeend', weather);
     blcokDetail.insertAdjacentElement('beforeend', mainTempBlock);
 
+    const sunriseTimestamp = arr.city.sunrise;
+    const sunsetTimestamp = arr.city.sunset;
+
+    const sunriseMilliseconds = sunriseTimestamp * 1000;
+    const sunsetMilliseconds = sunsetTimestamp * 1000;
+
+    const sunriseDate = new Date(sunriseMilliseconds);
+    const sunsetDate = new Date(sunsetMilliseconds);
+
+    const sunriseHours = sunriseDate.getHours();
+    
+    const sunriseMinutes = String(sunriseDate.getMinutes()).padStart(2, '0');
+
+    const sunsetHours = sunsetDate.getHours();
+    const sunsetMinutes = String(sunsetDate.getMinutes()).padStart(2, '0');
+
+    const downBlock = document.createElement('div');
+    downBlock.classList.add('down_block');
+    blcokDetail.insertAdjacentElement('beforeend', downBlock);
+    const downBlockText1 = document.createElement('div');
+    downBlockText1.innerText = `Sunrise: ${sunriseHours}:${sunriseMinutes}`;
+    downBlockText1.classList.add('down_block_t1')
+    const sunriseBlock = document.createElement('div');
+    sunriseBlock.classList.add('sunrise_block');
+    const sunrise = document.createElement('img');
+    sunrise.setAttribute('src', 'pictures/rise.png');
+    sunriseBlock.insertAdjacentElement('afterbegin', sunrise);
+    sunrise.classList.add('sunrise');
+    downBlockText1.insertAdjacentElement('afterbegin', sunriseBlock);
+    const downBlockText2 = document.createElement('div');
+    downBlockText2.classList.add('down_block_t2')
+    downBlockText2.innerText = `Sunset: ${sunsetHours}:${sunsetMinutes}`;
+    downBlock.insertAdjacentElement('beforeend', downBlockText1);
+    downBlock.insertAdjacentElement('beforeend', downBlockText2);
+
+    const sunset = document.createElement('img');
+    sunset.classList.add('sunset');
+    sunset.setAttribute('src', 'pictures/set.png');
+    const sunsetBlock = document.createElement('div');
+    sunsetBlock.classList.add('sunset_block');
+    sunsetBlock.insertAdjacentElement('afterbegin', sunset);
+    downBlockText2.insertAdjacentElement('afterbegin', sunsetBlock);
+    const border = document.createElement('div');
+    border.classList.add('border');
+    downBlock.insertAdjacentElement('beforeend', border);
 }
 
 export {visible1, visible2, createTab, removeTab, check1, check2}
