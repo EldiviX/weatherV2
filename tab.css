@@ -57,7 +57,7 @@
 
 .main_temp_block {
     /* display: flex; */
-    margin-top: 43px;
+    margin-top: 55px;
 
     justify-content: center;
 }
@@ -94,7 +94,7 @@
     display: flex;
     font-size: 18px;
 
-    margin-top: 85px;
+    margin-top: 75px;
     margin-left: 12px;
 
 }
