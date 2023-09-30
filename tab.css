@@ -39,4 +39,53 @@
 }
 
 .block_detail_other {
+
+}
+
+.tab_city_name {
+    margin-top: 17px;
+    font-size: 24px;
+    text-align: center;
+
+    /* font-weight: bold; */
+}
+
+.tab_city_date {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.733);
+}
+
+.main_temp_block {
+    /* display: flex; */
+    margin-top: 43px;
+
+    justify-content: center;
+}
+
+.temp_block {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    max-height: 100px;
+}
+
+.temp_text {
+    font-size: 62px;
+}
+
+.tab_city_pict {
+    margin-top: -7px;
+    margin-right: -5px;
+    width: 90px;
+    height: 90px;
+}
+
+.tab_weather {
+    text-align: center;
+    font-size: 20px;
+    margin-top: -10px;
+
+    /* font-weight: bold;
+    color: rgba(0, 0, 0, 0.815); */
 }

@@ -34,9 +34,9 @@ function createListElementBlock(item) {
         const targetItem = arrList.findIndex(item => item.id === st)
         arrList.splice(targetItem, 1);
 
-        saveArrListToLocalStorage();
-
+        
         event.target.closest('div').remove();
+        saveArrListToLocalStorage();
     });
 
     block.appendChild(img);

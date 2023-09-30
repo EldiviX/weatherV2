@@ -1,5 +1,4 @@
 import { arr } from "./render.js";
-// import { get } from "./render.js";
 
 const buttonTabNow = document.querySelector('.tabs_now');
 const buttonTabDetail = document.querySelector('.tabs_details');
@@ -44,7 +43,8 @@ function createTab() {
 
     buttonTabDetail.classList.add('shadow');
     buttonTabNow.classList.remove('shadow');
-    createFiller()
+    createFiller();
+    createMainTab();
 }
 
 function removeTab() {
@@ -103,6 +103,54 @@ function createFiller() {
         detailOther.insertAdjacentElement('beforeend', timeBlock);
     }
 
+}
+
+function createMainTab() {
+    const blcokDetail = document.querySelector('.block_detail');
+    const cityName = document.createElement('div');
+    const cityTime = document.createElement('div');
+    cityTime.classList.add('tab_city_date')
+
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'];
+
+    const now = new Date();
+    const dayOfWeek = daysOfWeek[now.getDay()];
+    const day = now.getDate();
+    const month = months[now.getMonth()];
+    const hours = String(now.getHours())
+    const minutes = String(now.getMinutes()).padStart(2, '0'); 
+
+
+    const formattedDate = `${dayOfWeek}, ${day} ${month} ${hours}:${minutes}`;
+
+    cityTime.innerText = formattedDate;
+    
+    cityName.innerText = arr.city.name;
+    cityName.classList.add('tab_city_name');
+    blcokDetail.insertAdjacentElement('beforeend', cityName);
+    blcokDetail.insertAdjacentElement('beforeend', cityTime);
+
+    const weather = document.createElement('div');
+    weather.classList.add('tab_weather');
+    weather.innerText = arr.list[0].weather[0].main;
+    
+    const mainTempBlock = document.createElement('div');
+    mainTempBlock.classList.add('main_temp_block');
+    const tempBlcok = document.createElement('div');
+    tempBlcok.classList.add('temp_block');
+    const pict = document.createElement('img');
+    pict.classList.add('tab_city_pict');
+    pict.setAttribute('src', `https://openweathermap.org/img/wn/${arr.list[0].weather[0].icon}@4x.png`);
+    const tempText = document.createElement('div')
+    tempText.innerText = `${arr.list[0].main.temp.toFixed()}°`
+    tempText.classList.add('temp_text');
+    tempBlcok.insertAdjacentElement('beforeend', pict);
+    tempBlcok.insertAdjacentElement('beforeend', tempText);
+    mainTempBlock.insertAdjacentElement('beforeend', tempBlcok);
+    mainTempBlock.insertAdjacentElement('beforeend', weather);
+    blcokDetail.insertAdjacentElement('beforeend', mainTempBlock);
 
 }
 

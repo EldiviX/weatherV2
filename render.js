@@ -8,44 +8,43 @@ const form = document.querySelector('form');
 const button = document.querySelector('button');
 let arr;
 
-function get(city) {
-    event.preventDefault();
-    const input = document.querySelector('.input');
-    let cityName = input.value
-    let cityToSearch = cityName !== '' ? cityName : city;
+async function get(city) {
+        event.preventDefault();
+        const input = document.querySelector('.input');
+        let cityName = input.value
+        let cityToSearch = cityName !== '' ? cityName : city;
 
-    const url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}&units=metric`;
+        const url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}&units=metric`;
 
-    if (cityToSearch.trim() !== '') {
-        fetch(url)
-            .then(result => {
+        try {
+            if (cityToSearch.trim() !== '') {
+                const result = await fetch(url);
+    
                 if(!result.ok) {
                     throw new Error(`${result.status}`);
                 }
+                
                 input.placeholder = 'City';
-                return result.json()
-            })
-            .then(data => {
+                const data = await result.json();
                 arr = data;
                 input.value = '';
                 console.log(arr);
                 render(arr);
+    
                 if (visible2 === true) {
                     check1();
                     check2();
                 }
-            })
-            .catch(error => {
-                console.error(error);
-                
-                input.placeholder = `City not found`;
-                input.value = '';
-            });
+            } 
+        } catch (error) {
+            console.error(error);
+                            
+            input.placeholder = `City not found`;
+            input.value = '';
+            
         }
-    
+    }
         
-}
-    
 function render(arr) {
     createElements(arr);
 }

@@ -14,7 +14,7 @@ const twoArrList = [
     {id: 0, name: "Moscow"},
     {id: 1, name: "London"},
     {id: 2, name: "New Jersey"},
-    {id: 3, name: "Cape Town"}
+    {id: 3, name: "Cape Town"},
 ];
 
 let arrList = [...twoArrList];
@@ -24,7 +24,8 @@ if (localStorage.getItem('arrList')) {
 }
 
 if (arrList.length > 0) {
-    idteg = arrList[arrList.length - 1].id;
+    idteg = arrList[arrList.length - 1].id + 1;
+    saveArrListToLocalStorage();
 }
 
 function saveArrListToLocalStorage() {
